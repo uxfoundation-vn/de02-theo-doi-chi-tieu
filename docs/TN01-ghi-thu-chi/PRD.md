@@ -130,11 +130,15 @@ AC06: Lưu xong quay về màn trước; số liệu tháng cập nhật ngay.
 
 #### US1.2 Ghi khoản thu
 
+User Story: Là người dùng, tôi muốn ghi khoản thu để biết tháng này có bao nhiêu tiền.
+
 AC01: Đổi sang Thu bằng nút chuyển ở đầu màn; danh mục gợi ý đổi theo.
 
 AC02: Số tiền thu hiển thị màu khác khoản chi và có dấu "+" ở danh sách.
 
 #### US1.3 Ghi bù ngày đã qua
+
+User Story: Là người dùng, tôi muốn ghi bù giao dịch của ngày đã qua để số liệu vẫn đủ khi quên ghi.
 
 AC01: Chọn ngày có lối tắt Hôm nay, Hôm qua và lịch tháng.
 
@@ -154,6 +158,8 @@ AC03: Chưa có giao dịch → màn trống mời ghi khoản đầu tiên.
 
 #### US2.2 Xem sổ giao dịch
 
+User Story: Là người dùng, tôi muốn xem sổ giao dịch theo ngày để rà lại từng khoản thu chi trong tháng.
+
 AC01: Giao dịch nhóm theo ngày, mới nhất ở trên; mỗi ngày có tổng chi và tổng thu.
 
 AC02: Chuyển tháng bằng nút trước, sau; không chuyển được sang tháng tương lai.
@@ -162,11 +168,15 @@ AC02: Chuyển tháng bằng nút trước, sau; không chuyển được sang t
 
 #### US3.1 Sửa giao dịch
 
+User Story: Là người dùng, tôi muốn sửa giao dịch ghi sai để số liệu đúng.
+
 AC01: Chạm vào giao dịch mở màn sửa với dữ liệu đã có; sửa được mọi trường.
 
 AC02: Đổi ngày sang tháng khác → giao dịch chuyển sang tháng đó, có thông báo.
 
 #### US3.2 Xoá giao dịch
+
+User Story: Là người dùng, tôi muốn xoá giao dịch ghi nhầm và hoàn tác được để số liệu đúng mà không sợ xoá nhầm.
 
 AC01: Xoá bằng vuốt trái ở danh sách hoặc nút Xoá ở màn sửa.
 

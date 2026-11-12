@@ -137,6 +137,8 @@ AC05: Tên file thể hiện khoảng thời gian đã xuất.
 
 #### US1.3 Xử lý khi có sự cố
 
+User Story: Là người dùng, tôi muốn được báo rõ khi xuất file gặp sự cố để biết cách thử lại.
+
 AC01: Đang tạo file → hiện tiến trình, không cho bấm Xuất lần hai.
 
 AC02: Tạo file thất bại → báo lỗi, cho thử lại, giữ nguyên lựa chọn.

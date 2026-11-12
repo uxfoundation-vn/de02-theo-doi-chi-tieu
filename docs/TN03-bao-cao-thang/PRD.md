@@ -134,6 +134,8 @@ AC04: Chuyển sang Thu để xem cơ cấu thu.
 
 #### US1.3 Xem chi theo ngày
 
+User Story: Là người dùng, tôi muốn xem chi theo từng ngày để biết ngày nào tiêu nhiều.
+
 AC01: Biểu đồ cột hiện tổng chi từng ngày trong tháng.
 
 AC02: Chạm một cột hiện ngày và số tiền.
@@ -144,6 +146,8 @@ AC03: Hiện mức chi trung bình mỗi ngày.
 
 #### US2.1 Xem giao dịch của một danh mục
 
+User Story: Là người dùng, tôi muốn xem giao dịch của một danh mục để hiểu vì sao con số như vậy.
+
 AC01: Chạm danh mục mở danh sách giao dịch của danh mục đó trong tháng.
 
 AC02: Đầu màn hiện tổng tiền, số giao dịch, so với tháng trước.
@@ -153,6 +157,8 @@ AC03: Chạm giao dịch mở màn sửa; quay lại thì báo cáo đã cập n
 ### UC3. Chuyển kỳ
 
 #### US3.1 Xem tháng khác
+
+User Story: Là người dùng, tôi muốn xem báo cáo của tháng khác để nhìn lại chi tiêu trước đây.
 
 AC01: Chuyển tháng bằng nút trước, sau; không chuyển được sang tháng tương lai.
 

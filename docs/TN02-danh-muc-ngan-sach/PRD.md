@@ -127,6 +127,8 @@ AC04: Kéo thả để sắp xếp; thứ tự này dùng ở màn chọn danh m
 
 #### US1.2 Ẩn và xoá danh mục
 
+User Story: Là người dùng, tôi muốn ẩn hoặc xoá danh mục không dùng để chọn danh mục nhanh hơn.
+
 AC01: Ẩn danh mục → không hiện khi chọn danh mục; giao dịch cũ và báo cáo vẫn giữ.
 
 AC02: Xoá danh mục chưa có giao dịch → hỏi xác nhận rồi xoá.
@@ -151,6 +153,8 @@ AC04: Sửa hoặc xoá ngân sách không ảnh hưởng giao dịch.
 
 #### US2.2 Theo dõi ngân sách
 
+User Story: Là người dùng, tôi muốn thấy đã chi bao nhiêu so với ngân sách để biết còn được tiêu bao nhiêu.
+
 AC01: Mỗi ngân sách hiện đã chi, hạn mức, còn lại, thanh tiến độ.
 
 AC02: Thanh tiến độ đổi trạng thái ở 80% và 100%, kèm nhãn chữ "Sắp vượt", "Đã vượt".
@@ -162,6 +166,8 @@ AC04: Tháng hiện tại hiện thêm "Còn {n} ngày".
 ### UC3. Cảnh báo
 
 #### US3.1 Cảnh báo khi ghi giao dịch
+
+User Story: Là người dùng, tôi muốn được cảnh báo khi sắp vượt hoặc đã vượt ngân sách để kịp điều chỉnh.
 
 AC01: Lưu khoản chi làm danh mục đạt 80% → cảnh báo sắp vượt, nêu số còn lại.
 
