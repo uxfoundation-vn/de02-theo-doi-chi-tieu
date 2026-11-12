@@ -209,5 +209,6 @@ Bản EN: `[chờ bổ sung]`.
 | Tương thích | File mở đúng tiếng Việt trên Excel (Windows, macOS), Google Sheets, Numbers |
 | Bảo mật | File chỉ nằm trong thư mục tạm của app cho tới khi chia sẻ; xoá sau khi dùng; không gửi qua máy chủ; ô bắt đầu bằng ký tự công thức được vô hiệu hoá (BR-33) |
 | Offline | Tạo file không cần mạng |
+| Log / audit | Ghi trên máy mỗi lần xuất: khoảng thời gian, loại giao dịch, số dòng, kết quả; không ghi nội dung file |
 | Tracking | Mở màn xuất (nguồn), chọn khoảng thời gian, bấm Xuất (số giao dịch theo khoảng: 1–100, 101–1.000, trên 1.000), hoàn tất, huỷ, lỗi |
 | Accessibility | Tiến trình tạo file được trình đọc màn hình thông báo; nút disabled có lý do đọc được |

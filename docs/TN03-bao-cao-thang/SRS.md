@@ -233,5 +233,7 @@ Bản EN: `[chờ bổ sung]`.
 | Hiệu năng | **SCR-09** hiện ≤ 1 giây với 10.000 giao dịch; đổi tháng ≤ 500 ms |
 | Chính xác | Tổng các danh mục bằng đúng tổng của loại; phép tính trên số nguyên |
 | Offline | Toàn bộ chức năng chạy không cần mạng |
+| Bảo mật | Báo cáo tính trên máy, không gửi số liệu ra ngoài; số tiền không đưa vào tracking |
+| Log / audit | Chỉ ghi lỗi tính và lỗi vẽ báo cáo, kèm tháng và thời điểm |
 | Tracking | Mở báo cáo, đổi tháng, đổi loại, chạm danh mục, chạm cột ngày, bấm Xuất |
 | Accessibility | Biểu đồ có bản thay thế dạng danh sách cho trình đọc màn hình; lát biểu đồ phân biệt bằng nhãn chữ, không chỉ bằng màu; tăng giảm có chữ "tăng", "giảm" kèm mũi tên |

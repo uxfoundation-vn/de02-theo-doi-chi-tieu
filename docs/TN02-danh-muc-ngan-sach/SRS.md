@@ -329,5 +329,7 @@ Bản EN: `[chờ bổ sung]`.
 | Hiệu năng | **SCR-07** hiện ≤ 500 ms với 30 ngân sách và 10.000 giao dịch; kiểm tra cảnh báo ≤ 100 ms sau khi lưu |
 | Toàn vẹn dữ liệu | Chuyển giao dịch khi xoá danh mục là một thao tác trọn vẹn: hoặc chuyển hết rồi xoá, hoặc không đổi gì |
 | Offline | Toàn bộ chức năng chạy không cần mạng |
+| Bảo mật | Dữ liệu chỉ lưu trên máy; số tiền và tên danh mục không đưa vào tracking |
+| Log / audit | Ghi trên máy mỗi lần tạo, sửa, ẩn, xoá danh mục; đặt, đổi ngân sách; mốc cảnh báo đã hiện theo danh mục và tháng |
 | Tracking | Thêm, sửa, ẩn, xoá danh mục; đặt, sửa, xoá ngân sách (có dùng gợi ý); cảnh báo hiện (mốc), bấm Xem ngân sách |
 | Accessibility | Trạng thái ngân sách có nhãn chữ, không chỉ dựa vào màu; thanh tiến độ được đọc thành "{x} phần trăm"; kéo thả có thao tác thay thế "Di chuyển lên, xuống" |

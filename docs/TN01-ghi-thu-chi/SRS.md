@@ -308,5 +308,6 @@ Bản EN: `[chờ bổ sung]`.
 | Offline | Toàn bộ chức năng chạy không cần mạng |
 | Dữ liệu | Số tiền lưu dạng số nguyên, không dùng số thực; không mất dữ liệu khi app bị tắt đột ngột |
 | Quyền riêng tư | Không gửi số tiền, ghi chú, danh mục ra ngoài; analytics chỉ gửi sự kiện |
+| Log / audit | Ghi trên máy mỗi lần tạo, sửa, xoá, hoàn tác giao dịch kèm thời điểm; không ghi số tiền và ghi chú |
 | Tracking | Mở màn thêm, lưu (loại, có ghi chú, ngày khác hôm nay, danh mục từ gợi ý), sửa, xoá, hoàn tác |
 | Accessibility | Thu và chi phân biệt bằng dấu "+", "−" chứ không chỉ bằng màu; phím số có nhãn đọc màn hình; vùng chạm ≥ 44 pt |
