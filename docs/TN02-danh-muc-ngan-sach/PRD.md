@@ -1,8 +1,6 @@
-> **Mã:** DE02-TN02-PRD · **Trạng thái:** nháp · **Người viết:** Design (mock) · **SRS:** [SRS.md](SRS.md)
+> **Mã:** DE02-TN02-PRD · **Trạng thái:** đã chốt · **Người viết:** Design · **SRS:** [SRS.md](SRS.md)
 
 # PRD Danh mục và ngân sách (App theo dõi chi tiêu)
-
-> **Bản mock.** Con số đánh dấu `[giả định]` dùng để dựng flow, cần PO xác nhận trước khi dùng.
 
 ## 1. Bối cảnh và vấn đề
 
@@ -22,9 +20,9 @@ Giao dịch ở [TN01](../TN01-ghi-thu-chi/PRD.md) luôn gắn với một danh 
 
 ### 1.3 Mục tiêu
 
-- ≥ 40% người dùng hoạt động đặt ít nhất 1 ngân sách `[giả định]`.
+- ≥ 40% người dùng hoạt động đặt ít nhất 1 ngân sách.
 - Người dùng biết mình sắp vượt ngân sách trước khi vượt.
-- Tỉ lệ giao dịch rơi vào danh mục "Khác" ≤ 15% `[giả định]`.
+- Tỉ lệ giao dịch rơi vào danh mục "Khác" ≤ 15%.
 
 ## 2. Người dùng
 
@@ -71,7 +69,7 @@ Vượt ngân sách được báo bằng con số và màu cảnh báo, không d
 
 ## 5. Quy tắc nghiệp vụ
 
-| **Quy tắc** | **Giá trị** `[giả định]` |
+| **Quy tắc** | **Giá trị** |
 | --- | --- |
 | Danh mục có sẵn (Chi) | Ăn uống, Đi lại, Mua sắm, Hoá đơn, Giải trí, Sức khoẻ, Giáo dục, Khác |
 | Danh mục có sẵn (Thu) | Lương, Thưởng, Được cho, Khác |
@@ -177,7 +175,7 @@ AC03: Mỗi mốc chỉ cảnh báo một lần mỗi tháng cho mỗi danh mụ
 
 AC04: Cảnh báo không chặn việc lưu giao dịch.
 
-## 8. Chỉ số theo dõi `[giả định]`
+## 8. Chỉ số theo dõi
 
 | **Chỉ số** | **Định nghĩa** | **Mục tiêu MVP** |
 | --- | --- | --- |

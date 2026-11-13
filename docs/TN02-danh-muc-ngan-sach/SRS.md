@@ -1,8 +1,8 @@
-> **Mã:** DE02-TN02-SRS · **Trạng thái:** nháp · **Người viết:** Design (mock) · **PRD:** [PRD.md](PRD.md)
+> **Mã:** DE02-TN02-SRS · **Trạng thái:** đã chốt · **Người viết:** Design · **PRD:** [PRD.md](PRD.md)
 
 # UC-DE02-02 - Danh mục và ngân sách
 
-> **Bản mock.** Giá trị `[giả định]` cần BA xác nhận. Ghi giao dịch xem [SRS TN01](../TN01-ghi-thu-chi/SRS.md).
+> Ghi giao dịch xem [SRS TN01](../TN01-ghi-thu-chi/SRS.md).
 
 ## 1. Tổng quan
 
@@ -12,7 +12,7 @@
 | Actor | Người dùng · Hệ thống (app và bộ nhớ trên thiết bị) |
 | Phạm vi | Quản lý danh mục; đặt, sửa, xoá ngân sách; tiến độ; cảnh báo trong app |
 | Ngoài phạm vi | Danh mục con, ngân sách tổng, ngân sách tuần, thông báo đẩy |
-| Nền tảng | App iOS / Android `[giả định]` |
+| Nền tảng | App iOS / Android |
 
 ## 2. User Story
 
@@ -28,16 +28,16 @@
 
 | **Mã** | **Quy tắc** |
 | --- | --- |
-| BR-11 | Khi cài app, tạo sẵn danh mục Chi: Ăn uống, Đi lại, Mua sắm, Hoá đơn, Giải trí, Sức khoẻ, Giáo dục, Khác; Thu: Lương, Thưởng, Được cho, Khác `[giả định]` |
-| BR-12 | **Tên danh mục** 1–30 ký tự, không trùng trong cùng loại (không phân biệt hoa thường). Tối đa 30 danh mục mỗi loại `[giả định]`, **tính cả danh mục đã ẩn**; vì vậy "Hiện lại" một danh mục đã ẩn luôn thực hiện được, không bị chặn bởi giới hạn |
+| BR-11 | Khi cài app, tạo sẵn danh mục Chi: Ăn uống, Đi lại, Mua sắm, Hoá đơn, Giải trí, Sức khoẻ, Giáo dục, Khác; Thu: Lương, Thưởng, Được cho, Khác |
+| BR-12 | **Tên danh mục** 1–30 ký tự, không trùng trong cùng loại (không phân biệt hoa thường). Tối đa 30 danh mục mỗi loại, **tính cả danh mục đã ẩn**; vì vậy "Hiện lại" một danh mục đã ẩn luôn thực hiện được, không bị chặn bởi giới hạn |
 | BR-13 | Danh mục có biểu tượng (chọn từ bộ có sẵn) và màu (bảng 12 màu); loại không đổi được sau khi tạo |
 | BR-14 | **Ẩn danh mục**: không hiện ở **SCR-04**; giao dịch cũ, báo cáo, ngân sách đang có vẫn giữ |
 | BR-15 | **Xoá danh mục** chưa có giao dịch: xác nhận rồi xoá, kèm xoá ngân sách của danh mục. Đã có giao dịch: phải chọn danh mục cùng loại để nhận giao dịch, hoặc chuyển sang ẩn |
 | BR-16 | Danh mục "Khác" của mỗi loại không xoá, không ẩn, không đổi tên |
-| BR-17 | **Ngân sách**: mỗi danh mục chi có tối đa 1 hạn mức, số nguyên VND > 0, áp dụng từ **tháng đặt ngân sách** (lưu ở `start_month`) và lặp lại hằng tháng cho tới khi sửa hoặc xoá. Tháng trước `start_month` không có ngân sách. Sửa hạn mức không lưu lịch sử: mức mới áp dụng cho mọi tháng từ `start_month`, kể cả tháng đã qua `[giả định]` |
+| BR-17 | **Ngân sách**: mỗi danh mục chi có tối đa 1 hạn mức, số nguyên VND > 0, áp dụng từ **tháng đặt ngân sách** (lưu ở `start_month`) và lặp lại hằng tháng cho tới khi sửa hoặc xoá. Tháng trước `start_month` không có ngân sách. Sửa hạn mức không lưu lịch sử: mức mới áp dụng cho mọi tháng từ `start_month`, kể cả tháng đã qua |
 | BR-18 | **Tiến độ** = tổng chi của danh mục trong tháng / hạn mức. Trạng thái: `BINH_THUONG` (< 80%), `SAP_VUOT` (≥ 80% và ≤ 100%), `DA_VUOT` (> 100%) |
 | BR-19 | **Cảnh báo** hiện ngay sau khi lưu giao dịch làm danh mục chuyển sang `SAP_VUOT` hoặc `DA_VUOT`. Mỗi mốc chỉ báo 1 lần mỗi tháng cho mỗi danh mục. Sửa, xoá giao dịch làm tiến độ giảm thì không báo |
-| BR-20 | **Gợi ý hạn mức** = tổng chi của danh mục trong tháng trước, làm tròn lên bội số 50.000 ₫; không có dữ liệu thì không gợi ý `[giả định]` |
+| BR-20 | **Gợi ý hạn mức** = tổng chi của danh mục trong tháng trước, làm tròn lên bội số 50.000 ₫; không có dữ liệu thì không gợi ý |
 
 ## 4. Trạng thái
 
@@ -167,7 +167,7 @@ flowchart TD
 | A1 | Sửa hạn mức | Chạm ngân sách ở **SCR-07** → **SCR-08** chế độ sửa; lưu thì tính lại tiến độ |
 | A2 | Xoá ngân sách | Nút Xoá ở **SCR-08** → MSG-14 xác nhận; giao dịch không đổi |
 | A3 | Mọi danh mục chi đã có ngân sách | Nút "Thêm ngân sách" ẩn |
-| A4 | Xem tháng đã qua | **SCR-07** chỉ đọc. Tháng từ `start_month` trở đi: tính tiến độ theo hạn mức hiện tại `[giả định]`. Tháng trước `start_month`: danh mục không hiện thanh tiến độ, ghi "Chưa đặt ngân sách trong tháng này" (BR-17) |
+| A4 | Xem tháng đã qua | **SCR-07** chỉ đọc. Tháng từ `start_month` trở đi: tính tiến độ theo hạn mức hiện tại. Tháng trước `start_month`: danh mục không hiện thanh tiến độ, ghi "Chưa đặt ngân sách trong tháng này" (BR-17) |
 | A5 | Chi vừa đặt đã ở mức `SAP_VUOT` hoặc `DA_VUOT` | Hiện đúng trạng thái, không bật cảnh báo vì không phát sinh từ giao dịch |
 
 ### UC-06 Cảnh báo ngân sách
@@ -321,7 +321,7 @@ sequenceDiagram
 
 ## 10. Yêu cầu phi chức năng
 
-| **Mục** | **Yêu cầu** `[giả định]` |
+| **Mục** | **Yêu cầu** |
 | --- | --- |
 | Hiệu năng | **SCR-07** hiện ≤ 500 ms với 30 ngân sách và 10.000 giao dịch; kiểm tra cảnh báo ≤ 100 ms sau khi lưu |
 | Toàn vẹn dữ liệu | Chuyển giao dịch khi xoá danh mục là một thao tác trọn vẹn: hoặc chuyển hết rồi xoá, hoặc không đổi gì |

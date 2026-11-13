@@ -1,8 +1,6 @@
-> **Mã:** DE02-TN04-PRD · **Trạng thái:** nháp · **Người viết:** Design (mock) · **SRS:** [SRS.md](SRS.md)
+> **Mã:** DE02-TN04-PRD · **Trạng thái:** đã chốt · **Người viết:** Design · **SRS:** [SRS.md](SRS.md)
 
 # PRD Xuất CSV (App theo dõi chi tiêu)
-
-> **Bản mock.** Con số đánh dấu `[giả định]` dùng để dựng flow, cần PO xác nhận trước khi dùng.
 
 ## 1. Bối cảnh và vấn đề
 
@@ -22,9 +20,9 @@ Dữ liệu của app chỉ nằm trên thiết bị (xem [README](../../README.
 
 ### 1.3 Mục tiêu
 
-- Xuất được dữ liệu trong ≤ 3 chạm kể từ màn xuất `[giả định]`.
+- Xuất được dữ liệu trong ≤ 3 chạm kể từ màn xuất.
 - File mở đúng tiếng Việt trên Excel và Google Sheets, số tiền cộng được ngay.
-- ≥ 10% người dùng hoạt động xuất ít nhất 1 lần trong 3 tháng `[giả định]`.
+- ≥ 10% người dùng hoạt động xuất ít nhất 1 lần trong 3 tháng.
 
 ## 2. Người dùng
 
@@ -70,7 +68,7 @@ App không tự lưu vào chỗ khó tìm. File được đưa cho bảng chia s
 
 ## 5. Quy tắc nghiệp vụ
 
-| **Quy tắc** | **Giá trị** `[giả định]` |
+| **Quy tắc** | **Giá trị** |
 | --- | --- |
 | Định dạng | CSV, mã hoá UTF-8 có BOM, dấu phẩy ngăn cột |
 | Cột | Ngày, Loại, Danh mục, Số tiền, Ghi chú |
@@ -145,7 +143,7 @@ AC02: Tạo file thất bại → báo lỗi, cho thử lại, giữ nguyên l�
 
 AC03: Người dùng đóng bảng chia sẻ mà không lưu → không báo lỗi, ở lại màn xuất.
 
-## 8. Chỉ số theo dõi `[giả định]`
+## 8. Chỉ số theo dõi
 
 | **Chỉ số** | **Định nghĩa** | **Mục tiêu MVP** |
 | --- | --- | --- |

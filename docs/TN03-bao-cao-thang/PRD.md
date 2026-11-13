@@ -1,8 +1,6 @@
-> **Mã:** DE02-TN03-PRD · **Trạng thái:** nháp · **Người viết:** Design (mock) · **SRS:** [SRS.md](SRS.md)
+> **Mã:** DE02-TN03-PRD · **Trạng thái:** đã chốt · **Người viết:** Design · **SRS:** [SRS.md](SRS.md)
 
 # PRD Báo cáo tháng (App theo dõi chi tiêu)
-
-> **Bản mock.** Con số đánh dấu `[giả định]` dùng để dựng flow, cần PO xác nhận trước khi dùng.
 
 ## 1. Bối cảnh và vấn đề
 
@@ -22,8 +20,8 @@ Người dùng đã ghi giao dịch ([TN01](../TN01-ghi-thu-chi/PRD.md)) và ph�
 
 ### 1.3 Mục tiêu
 
-- Người dùng trả lời được "tháng này tiêu nhiều nhất vào đâu" trong ≤ 5 giây `[giả định]`.
-- ≥ 50% người dùng hoạt động xem báo cáo ít nhất 1 lần mỗi tháng `[giả định]`.
+- Người dùng trả lời được "tháng này tiêu nhiều nhất vào đâu" trong ≤ 5 giây.
+- ≥ 50% người dùng hoạt động xem báo cáo ít nhất 1 lần mỗi tháng.
 - Mọi con số trong báo cáo truy được về danh sách giao dịch.
 
 ## 2. Người dùng
@@ -71,7 +69,7 @@ Tháng chưa có giao dịch thì nói chưa có, không vẽ biểu đồ rỗn
 
 ## 5. Quy tắc nghiệp vụ
 
-| **Quy tắc** | **Giá trị** `[giả định]` |
+| **Quy tắc** | **Giá trị** |
 | --- | --- |
 | Kỳ báo cáo | Tháng theo lịch; mặc định tháng hiện tại |
 | Cơ cấu theo danh mục | Tỉ lệ = chi của danh mục / tổng chi tháng, làm tròn 1 chữ số thập phân |
@@ -164,7 +162,7 @@ AC01: Chuyển tháng bằng nút trước, sau; không chuyển được sang t
 
 AC02: Tháng không có giao dịch → màn trống nói rõ, không vẽ biểu đồ.
 
-## 8. Chỉ số theo dõi `[giả định]`
+## 8. Chỉ số theo dõi
 
 | **Chỉ số** | **Định nghĩa** | **Mục tiêu MVP** |
 | --- | --- | --- |

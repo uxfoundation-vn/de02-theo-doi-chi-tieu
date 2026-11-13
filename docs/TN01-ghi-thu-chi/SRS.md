@@ -1,8 +1,8 @@
-> **Mã:** DE02-TN01-SRS · **Trạng thái:** nháp · **Người viết:** Design (mock) · **PRD:** [PRD.md](PRD.md)
+> **Mã:** DE02-TN01-SRS · **Trạng thái:** đã chốt · **Người viết:** Design · **PRD:** [PRD.md](PRD.md)
 
 # UC-DE02-01 - Ghi thu/chi
 
-> **Bản mock.** Giá trị `[giả định]` cần BA xác nhận. Danh mục và ngân sách xem [SRS TN02](../TN02-danh-muc-ngan-sach/SRS.md); báo cáo xem [SRS TN03](../TN03-bao-cao-thang/SRS.md).
+> Danh mục và ngân sách xem [SRS TN02](../TN02-danh-muc-ngan-sach/SRS.md); báo cáo xem [SRS TN03](../TN03-bao-cao-thang/SRS.md).
 
 ## 1. Tổng quan
 
@@ -12,7 +12,7 @@
 | Actor | Người dùng · Hệ thống (app và bộ nhớ trên thiết bị) |
 | Phạm vi | Thêm, sửa, xoá giao dịch; Tổng quan; Sổ giao dịch, tìm kiếm và lọc sổ |
 | Ngoài phạm vi | Nhiều ví, giao dịch định kỳ, ảnh hoá đơn, nhập tự động |
-| Nền tảng | App iOS / Android `[giả định]` |
+| Nền tảng | App iOS / Android |
 
 ## 2. User Story
 
@@ -28,17 +28,17 @@
 
 | **Mã** | **Quy tắc** |
 | --- | --- |
-| BR-01 | **Số tiền** là số nguyên VND từ 1 đến 999.999.999.999; hiển thị có dấu chấm ngăn nghìn; không cho nhập số 0 ở đầu `[giả định]`. Dưới ô số tiền luôn **đọc số bằng chữ**, ví dụ 500000 → "Năm trăm nghìn đồng", cập nhật mỗi lần gõ |
+| BR-01 | **Số tiền** là số nguyên VND từ 1 đến 999.999.999.999; hiển thị có dấu chấm ngăn nghìn; không cho nhập số 0 ở đầu. Dưới ô số tiền luôn **đọc số bằng chữ**, ví dụ 500000 → "Năm trăm nghìn đồng", cập nhật mỗi lần gõ |
 | BR-02 | **Loại** gồm Chi và Thu; mặc định Chi. Đổi loại thì bỏ danh mục đã chọn vì danh mục thuộc về một loại |
 | BR-03 | **Danh mục** bắt buộc, lấy từ danh sách của TN02 theo đúng loại |
-| BR-04 | **Gợi ý danh mục**: 4 danh mục dùng gần nhất của loại đang chọn; chưa đủ lịch sử thì lấy theo thứ tự mặc định `[giả định]` |
+| BR-04 | **Gợi ý danh mục**: 4 danh mục dùng gần nhất của loại đang chọn; chưa đủ lịch sử thì lấy theo thứ tự mặc định |
 | BR-05 | **Ngày** mặc định hôm nay; chọn được mọi ngày đã qua; không chọn ngày tương lai. Giao dịch không lưu giờ, thứ tự trong ngày theo thời điểm tạo |
 | BR-06 | **Ghi chú** tối đa 200 ký tự |
-| BR-07 | **Xoá giao dịch**: ẩn ngay, số liệu tính lại ngay; Hoàn tác 5 giây; hết giờ thì xoá vĩnh viễn `[giả định]` |
+| BR-07 | **Xoá giao dịch**: ẩn ngay, số liệu tính lại ngay; Hoàn tác 5 giây; hết giờ thì xoá vĩnh viễn |
 | BR-08 | **Số liệu tháng**: tổng thu, tổng chi, còn lại = thu − chi, tính trên giao dịch có ngày trong tháng đang xem |
 | BR-09 | **Sổ giao dịch** nhóm theo ngày giảm dần; trong ngày, giao dịch tạo sau đứng trên; mỗi nhóm hiện tổng chi và tổng thu của ngày |
 | BR-10 | Rời màn thêm khi đã nhập số tiền mà chưa lưu → hỏi xác nhận bỏ (MSG-03) |
-| BR-36 | **Tìm kiếm và lọc sổ giao dịch**: tìm trong ghi chú, tên danh mục và số tiền (gõ "50000" hoặc "50.000" đều khớp); bỏ dấu, không phân biệt hoa thường; chạy sau 300 ms. Lọc: Loại (Tất cả, Chi, Thu), Danh mục (chọn nhiều). Có từ khoá hoặc bộ lọc → tìm trên **mọi tháng**, kết quả vẫn nhóm theo ngày như BR-09, đầu danh sách hiện tổng chi, tổng thu của kết quả. Không có kết quả → MSG-27 `[giả định]` |
+| BR-36 | **Tìm kiếm và lọc sổ giao dịch**: tìm trong ghi chú, tên danh mục và số tiền (gõ "50000" hoặc "50.000" đều khớp); bỏ dấu, không phân biệt hoa thường; chạy sau 300 ms. Lọc: Loại (Tất cả, Chi, Thu), Danh mục (chọn nhiều). Có từ khoá hoặc bộ lọc → tìm trên **mọi tháng**, kết quả vẫn nhóm theo ngày như BR-09, đầu danh sách hiện tổng chi, tổng thu của kết quả. Không có kết quả → MSG-27 |
 
 ## 4. Trạng thái
 
@@ -306,7 +306,7 @@ sequenceDiagram
 
 ## 10. Yêu cầu phi chức năng
 
-| **Mục** | **Yêu cầu** `[giả định]` |
+| **Mục** | **Yêu cầu** |
 | --- | --- |
 | Hiệu năng | Mở **SCR-02** ≤ 300 ms; **SCR-01** hiện ≤ 1 giây với 10.000 giao dịch |
 | Offline | Toàn bộ chức năng chạy không cần mạng |
