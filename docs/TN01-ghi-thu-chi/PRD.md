@@ -203,9 +203,9 @@ AC02: Xoá xong hiện "Đã xoá" kèm Hoàn tác trong 5 giây; số liệu th
 
 ## 10. Câu hỏi mở
 
-> Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
+> Mọi câu hỏi dưới đây đã được PO chốt ngày 13/11/2026; quyết định ghi sau mỗi câu và đã cập nhật vào SRS.
 
 - Có cần đọc số tiền bằng chữ dưới ô nhập để tránh sai số 0? → **Đã chốt:** Có, luôn hiện dưới ô số tiền (SRS BR-01).
-- Danh mục có bắt buộc không, hay cho lưu vào "Chưa phân loại"?
+- Danh mục có bắt buộc không, hay cho lưu vào "Chưa phân loại"? → **Đã chốt:** Bắt buộc, không có "Chưa phân loại"; luôn có danh mục "Khác" (SRS BR-03).
 - Sổ giao dịch có cần tìm kiếm và lọc ở MVP? → **Đã chốt:** Có tìm kiếm và lọc (SRS BR-36).
-- Có cho ghi giao dịch ở ngày tương lai (khoản sắp trả) không?
+- Có cho ghi giao dịch ở ngày tương lai (khoản sắp trả) không? → **Đã chốt:** Không (SRS BR-05).

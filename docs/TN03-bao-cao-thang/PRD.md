@@ -185,9 +185,9 @@ AC02: Tháng không có giao dịch → màn trống nói rõ, không vẽ biể
 
 ## 10. Câu hỏi mở
 
-> Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
+> Mọi câu hỏi dưới đây đã được PO chốt ngày 13/11/2026; quyết định ghi sau mỗi câu và đã cập nhật vào SRS.
 
 - Tháng đang diễn ra nên so với cả tháng trước hay cùng kỳ tháng trước (đến cùng ngày)? → **Đã chốt:** So cùng kỳ tháng trước, tính tới cùng ngày (SRS BR-23).
-- Có cần báo cáo theo năm ở MVP không?
-- Biểu đồ tròn hay cột ngang phù hợp hơn cho cơ cấu chi?
+- Có cần báo cáo theo năm ở MVP không? → **Đã chốt:** Không ở MVP.
+- Biểu đồ tròn hay cột ngang phù hợp hơn cho cơ cấu chi? → **Đã chốt:** Biểu đồ tròn (donut), 5 danh mục lớn nhất + Còn lại (SRS BR-25).
 - Có hiện ngân sách ngay trong báo cáo hay để riêng ở tab Ngân sách? → **Đã chốt:** Có hiện: danh mục có ngân sách hiện hạn mức và trạng thái ngay trong báo cáo (SRS BR-27).
