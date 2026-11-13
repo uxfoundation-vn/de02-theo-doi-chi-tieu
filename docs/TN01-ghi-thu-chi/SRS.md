@@ -10,7 +10,7 @@
 | --- | --- |
 | Mục tiêu | Người dùng ghi, sửa, xoá giao dịch thu chi và xem lại theo ngày, theo tháng |
 | Actor | Người dùng · Hệ thống (app và bộ nhớ trên thiết bị) |
-| Phạm vi | Thêm, sửa, xoá giao dịch; Tổng quan; Sổ giao dịch |
+| Phạm vi | Thêm, sửa, xoá giao dịch; Tổng quan; Sổ giao dịch, tìm kiếm và lọc sổ |
 | Ngoài phạm vi | Nhiều ví, giao dịch định kỳ, ảnh hoá đơn, nhập tự động |
 | Nền tảng | App iOS / Android `[giả định]` |
 | Figma | `[chưa có]` |
@@ -29,7 +29,7 @@
 
 | **Mã** | **Quy tắc** |
 | --- | --- |
-| BR-01 | **Số tiền** là số nguyên VND từ 1 đến 999.999.999.999; hiển thị có dấu chấm ngăn nghìn; không cho nhập số 0 ở đầu `[giả định]` |
+| BR-01 | **Số tiền** là số nguyên VND từ 1 đến 999.999.999.999; hiển thị có dấu chấm ngăn nghìn; không cho nhập số 0 ở đầu `[giả định]`. Dưới ô số tiền luôn **đọc số bằng chữ**, ví dụ 500000 → "Năm trăm nghìn đồng", cập nhật mỗi lần gõ |
 | BR-02 | **Loại** gồm Chi và Thu; mặc định Chi. Đổi loại thì bỏ danh mục đã chọn vì danh mục thuộc về một loại |
 | BR-03 | **Danh mục** bắt buộc, lấy từ danh sách của TN02 theo đúng loại |
 | BR-04 | **Gợi ý danh mục**: 4 danh mục dùng gần nhất của loại đang chọn; chưa đủ lịch sử thì lấy theo thứ tự mặc định `[giả định]` |
@@ -39,6 +39,7 @@
 | BR-08 | **Số liệu tháng**: tổng thu, tổng chi, còn lại = thu − chi, tính trên giao dịch có ngày trong tháng đang xem |
 | BR-09 | **Sổ giao dịch** nhóm theo ngày giảm dần; trong ngày, giao dịch tạo sau đứng trên; mỗi nhóm hiện tổng chi và tổng thu của ngày |
 | BR-10 | Rời màn thêm khi đã nhập số tiền mà chưa lưu → hỏi xác nhận bỏ (MSG-03) |
+| BR-36 | **Tìm kiếm và lọc sổ giao dịch**: tìm trong ghi chú, tên danh mục và số tiền (gõ "50000" hoặc "50.000" đều khớp); bỏ dấu, không phân biệt hoa thường; chạy sau 300 ms. Lọc: Loại (Tất cả, Chi, Thu), Danh mục (chọn nhiều). Có từ khoá hoặc bộ lọc → tìm trên **mọi tháng**, kết quả vẫn nhóm theo ngày như BR-09, đầu danh sách hiện tổng chi, tổng thu của kết quả. Không có kết quả → MSG-27 `[giả định]` |
 
 ## 4. Trạng thái
 
@@ -228,6 +229,7 @@ flowchart TD
 | --- | --- | --- | --- | --- |
 | 1 | Loại | Segmented | Có | Chi (mặc định), Thu; đổi loại bỏ danh mục đã chọn |
 | 2 | Số tiền | Ô số lớn | Có | BR-01; hiển thị dấu ngăn nghìn và ký hiệu ₫ |
+| 2b | Số tiền bằng chữ | Text phụ | – | Dưới ô số tiền, cập nhật mỗi lần gõ (BR-01); ẩn khi chưa nhập |
 | 3 | Danh mục gợi ý | Chips | Có | 4 danh mục (BR-04) + chip "Tất cả" mở **SCR-04** |
 | 4 | Ngày | Dòng chọn | Có | Hôm nay (mặc định), Hôm qua, lịch; ngày tương lai disabled |
 | 5 | Ghi chú | Text | Không | BR-06; placeholder "Ghi chú (không bắt buộc)" |
@@ -244,6 +246,9 @@ flowchart TD
 | 3 | Dòng giao dịch | List item | Biểu tượng và tên danh mục, ghi chú (1 dòng), số tiền; chi có dấu "−", thu có dấu "+" |
 | 4 | Vuốt trái | Gesture | Lộ nút Xoá |
 | 5 | Màn trống | Empty state | "Chưa có giao dịch nào trong tháng này" |
+| 6 | Tìm kiếm | Search bar | Placeholder "Tìm ghi chú, danh mục, số tiền"; có từ khoá thì ẩn Chọn tháng (BR-36) |
+| 7 | Lọc | Chips | Loại, Danh mục; có "Xoá lọc" (BR-36) |
+| 8 | Tổng kết quả | Text | "{n} giao dịch · Chi {x} ₫ · Thu {y} ₫" khi đang tìm hoặc lọc |
 
 ### SCR-04 Chọn danh mục (bottom sheet)
 
@@ -263,6 +268,7 @@ App lưu dữ liệu trên thiết bị, không gọi API.
 | \[TxnDelete\] | txn_id | – | Gọi khi hết thời gian hoàn tác (BR-07) |
 | \[TxnListByMonth\] | month | Giao dịch nhóm theo ngày, tổng mỗi ngày | BR-09 |
 | \[MonthSummary\] | month | total_income, total_expense, balance | BR-08 |
+| \[TxnSearch\] | keyword, type, category_ids | Giao dịch nhóm theo ngày, tổng chi, tổng thu | BR-36 |
 | \[CategoryRecent\] | type | 4 danh mục | BR-04 |
 
 ```mermaid
@@ -297,6 +303,7 @@ sequenceDiagram
 | MSG-06 | **SCR-01** | Bắt đầu theo dõi chi tiêu bằng khoản đầu tiên của bạn. \[Ghi khoản đầu tiên\] |
 | MSG-07 | **SCR-01** | Tháng này chưa có giao dịch nào |
 | MSG-08 | Toast | Đã chuyển giao dịch sang tháng {m}/{yyyy} |
+| MSG-27 | **SCR-03** | Không tìm thấy giao dịch nào. Thử từ khoá khác hoặc bỏ bớt bộ lọc |
 
 Bản EN: `[chờ bổ sung]`.
 

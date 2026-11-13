@@ -35,7 +35,7 @@
 | BR-24 | **Cơ cấu**: tỉ lệ danh mục = tổng của danh mục / tổng của loại trong tháng, làm tròn 1 chữ số thập phân; tổng các tỉ lệ hiển thị có thể lệch 0,1% do làm tròn |
 | BR-25 | **Biểu đồ tròn** hiện 5 danh mục lớn nhất; các danh mục còn lại gộp thành "Còn lại". Ít hơn hoặc bằng 5 danh mục thì không có "Còn lại" `[giả định]` |
 | BR-26 | **Chi theo ngày**: tổng chi mỗi ngày trong tháng; ngày chưa đến của tháng hiện tại để trống; trung bình ngày = tổng chi / số ngày đã qua (tháng hiện tại) hoặc số ngày của tháng (tháng đã qua) |
-| BR-27 | Danh mục `DA_AN` vẫn hiện trong báo cáo. Danh mục có ngân sách hiện kèm trạng thái theo BR-18 |
+| BR-27 | Danh mục `DA_AN` vẫn hiện trong báo cáo. Danh mục có ngân sách hiện kèm hạn mức, phần trăm đã dùng và trạng thái theo BR-18 |
 | BR-28 | Báo cáo tính lại mỗi khi mở màn và khi quay lại từ màn sửa giao dịch |
 
 ## 4. Trạng thái

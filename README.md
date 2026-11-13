@@ -68,7 +68,7 @@ Ngoài phạm vi cả đề: tài khoản và đồng bộ, kết nối ngân h�
 
 - Tiền tệ: VND, không có số lẻ; hiển thị có dấu chấm ngăn nghìn (ví dụ 45.000 ₫).
 - Tháng tính theo lịch, từ ngày 1 đến ngày cuối tháng, theo múi giờ thiết bị.
-- Mã BR, MSG, UC đánh số liên tục trong cả đề: TN01 dùng BR-01–10, MSG-01–08; TN02 dùng BR-11–20, MSG-09–16; TN03 dùng BR-21–28, MSG-17–20; TN04 dùng BR-29–35, MSG-21–26.
+- Mã BR, MSG, UC đánh số liên tục trong cả đề: TN01 dùng BR-01–10, MSG-01–08; TN02 dùng BR-11–20, MSG-09–16; TN03 dùng BR-21–28, MSG-17–20; TN04 dùng BR-29–35, MSG-21–26. Mã bổ sung sau đánh tiếp từ số cuối: BR-36, MSG-27 (tìm kiếm, lọc sổ giao dịch) ở SRS TN01; BR-37 (xuất kèm danh mục, ngân sách) ở SRS TN04.
 - Điều hướng: tab bar Tổng quan · Sổ giao dịch · Ngân sách · Báo cáo; nút "+" nổi ở mọi tab.
 - Giá trị đánh dấu `[giả định]` dùng để dựng flow, cần PO hoặc BA xác nhận trước khi dùng.
 

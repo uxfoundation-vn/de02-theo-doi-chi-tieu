@@ -43,14 +43,13 @@ App theo dõi chi tiêu cá nhân, dữ liệu lưu trên máy (xem [README](../
 - Gợi ý danh mục dùng gần đây.
 - Sửa, xoá giao dịch; xoá có Hoàn tác 5 giây.
 - Tổng quan: thu, chi, còn lại của tháng và giao dịch gần đây.
-- Sổ giao dịch: nhóm theo ngày, có tổng thu chi mỗi ngày.
+- Sổ giao dịch: nhóm theo ngày, có tổng thu chi mỗi ngày; tìm kiếm theo ghi chú, danh mục, số tiền và lọc theo loại, danh mục.
 
 ### 3.2 Ngoài phạm vi
 
 - Nhiều ví, chuyển tiền giữa các ví → phase sau.
 - Giao dịch định kỳ, đính kèm ảnh hoá đơn.
 - Nhập từ SMS, thông báo ngân hàng, quét hoá đơn.
-- Tìm kiếm và lọc sổ giao dịch `[cần chốt]`.
 
 ## 4. Nguyên tắc sản phẩm
 
@@ -197,7 +196,7 @@ AC02: Xoá xong hiện "Đã xoá" kèm Hoàn tác trong 5 giây; số liệu th
 
 | **Mục** | **Mô tả** | **Hướng xử lý** |
 | --- | --- | --- |
-| Nhập sai số 0 | 50.000 thành 500.000 | Hiển thị dấu ngăn nghìn khi gõ; đọc số bằng chữ dưới ô nhập `[cần chốt]` |
+| Nhập sai số 0 | 50.000 thành 500.000 | Hiển thị dấu ngăn nghìn khi gõ; đọc số bằng chữ dưới ô nhập |
 | Danh mục mặc định | Phụ thuộc bộ danh mục của TN02 | Dùng bộ danh mục có sẵn khi cài app |
 | Bỏ cuộc sau vài ngày | Ghi tay tốn công | Giữ thao tác ngắn; nhắc ghi cuối ngày ở phase sau |
 | Mất dữ liệu | Dữ liệu chỉ ở trên máy | Xuất CSV ở TN04; nói rõ trong Cài đặt |
@@ -206,7 +205,7 @@ AC02: Xoá xong hiện "Đã xoá" kèm Hoàn tác trong 5 giây; số liệu th
 
 > Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
 
-- Có cần đọc số tiền bằng chữ dưới ô nhập để tránh sai số 0?
+- Có cần đọc số tiền bằng chữ dưới ô nhập để tránh sai số 0? → **Đã chốt:** Có, luôn hiện dưới ô số tiền (SRS BR-01).
 - Danh mục có bắt buộc không, hay cho lưu vào "Chưa phân loại"?
-- Sổ giao dịch có cần tìm kiếm và lọc ở MVP?
+- Sổ giao dịch có cần tìm kiếm và lọc ở MVP? → **Đã chốt:** Có tìm kiếm và lọc (SRS BR-36).
 - Có cho ghi giao dịch ở ngày tương lai (khoản sắp trả) không?

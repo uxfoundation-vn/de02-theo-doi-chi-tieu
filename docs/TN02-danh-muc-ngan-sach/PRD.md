@@ -202,6 +202,6 @@ AC04: Cảnh báo không chặn việc lưu giao dịch.
 > Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
 
 - Có cần ngân sách tổng cho cả tháng ngay ở MVP không?
-- Mốc cảnh báo 80% có cho người dùng tự chỉnh không?
+- Mốc cảnh báo 80% có cho người dùng tự chỉnh không? → **Đã chốt:** Giữ cảnh báo ngân sách ở mốc cố định 80% và 100%; người dùng không chỉnh mốc.
 - Đổi hạn mức giữa tháng có áp dụng cho các tháng đã qua trong báo cáo không?
 - Danh mục có cần danh mục con (Ăn uống → Cà phê) không?

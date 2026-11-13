@@ -190,4 +190,4 @@ AC02: Tháng không có giao dịch → màn trống nói rõ, không vẽ biể
 - Tháng đang diễn ra nên so với cả tháng trước hay cùng kỳ tháng trước (đến cùng ngày)?
 - Có cần báo cáo theo năm ở MVP không?
 - Biểu đồ tròn hay cột ngang phù hợp hơn cho cơ cấu chi?
-- Có hiện ngân sách ngay trong báo cáo hay để riêng ở tab Ngân sách?
+- Có hiện ngân sách ngay trong báo cáo hay để riêng ở tab Ngân sách? → **Đã chốt:** Có hiện: danh mục có ngân sách hiện hạn mức và trạng thái ngay trong báo cáo (SRS BR-27).
