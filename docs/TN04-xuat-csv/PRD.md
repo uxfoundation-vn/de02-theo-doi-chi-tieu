@@ -167,7 +167,9 @@ AC03: Người dùng đóng bảng chia sẻ mà không lưu → không báo l�
 
 ## 10. Câu hỏi mở
 
-- Số tiền chi có nên ghi âm (−) thay vì dùng cột Loại?
-- Có cần xuất thêm file danh mục và ngân sách?
-- Có làm nhập từ CSV ở phase sau để khôi phục dữ liệu không?
-- Dấu ngăn cột dùng dấu phẩy hay dấu chấm phẩy cho người dùng Excel tiếng Việt?
+> Mọi câu hỏi dưới đây đã được PO chốt ngày 13/11/2026; quyết định ghi sau mỗi câu và đã cập nhật vào SRS.
+
+- Số tiền chi có nên ghi âm (−) thay vì dùng cột Loại? → **Đã chốt:** Giữ cột Loại, số tiền luôn dương (SRS BR-32).
+- Có cần xuất thêm file danh mục và ngân sách? → **Đã chốt:** Có. Tuỳ chọn kèm file danh mục và ngân sách (SRS BR-37).
+- Có làm nhập từ CSV ở phase sau để khôi phục dữ liệu không? → **Đã chốt:** Để phase sau, ngoài phạm vi MVP.
+- Dấu ngăn cột dùng dấu phẩy hay dấu chấm phẩy cho người dùng Excel tiếng Việt? → **Đã chốt:** Dấu phẩy, UTF-8 có BOM (SRS BR-31).

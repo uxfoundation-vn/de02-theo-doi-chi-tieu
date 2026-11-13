@@ -31,11 +31,11 @@
 | --- | --- |
 | BR-21 | **Kỳ báo cáo** là tháng theo lịch; mặc định tháng hiện tại; không xem được tháng tương lai; xem lùi tới tháng có giao dịch đầu tiên |
 | BR-22 | **Tóm tắt**: tổng thu, tổng chi, còn lại = thu − chi; cùng công thức với BR-08 |
-| BR-23 | **So với tháng trước**: chênh lệch = tháng này − tháng trước; phần trăm = chênh lệch / tháng trước, làm tròn số nguyên. Tháng trước bằng 0 → chỉ hiện chênh lệch tiền. Tháng trước không có giao dịch nào → không hiện so sánh |
+| BR-23 | **So với tháng trước**: tháng đã kết thúc → so với **cả** tháng trước. Tháng đang diễn ra → so **cùng kỳ**: tháng trước tính từ ngày 1 tới cùng ngày với hôm nay (tháng trước ngắn hơn thì tới ngày cuối tháng đó). Chênh lệch = tháng này − kỳ so sánh; phần trăm = chênh lệch / tháng trước, làm tròn số nguyên. Tháng trước bằng 0 → chỉ hiện chênh lệch tiền. Tháng trước không có giao dịch nào → không hiện so sánh |
 | BR-24 | **Cơ cấu**: tỉ lệ danh mục = tổng của danh mục / tổng của loại trong tháng, làm tròn 1 chữ số thập phân; tổng các tỉ lệ hiển thị có thể lệch 0,1% do làm tròn |
 | BR-25 | **Biểu đồ tròn** hiện 5 danh mục lớn nhất; các danh mục còn lại gộp thành "Còn lại". Ít hơn hoặc bằng 5 danh mục thì không có "Còn lại" `[giả định]` |
 | BR-26 | **Chi theo ngày**: tổng chi mỗi ngày trong tháng; ngày chưa đến của tháng hiện tại để trống; trung bình ngày = tổng chi / số ngày đã qua (tháng hiện tại) hoặc số ngày của tháng (tháng đã qua) |
-| BR-27 | Danh mục `DA_AN` vẫn hiện trong báo cáo. Danh mục có ngân sách hiện kèm trạng thái theo BR-18 |
+| BR-27 | Danh mục `DA_AN` vẫn hiện trong báo cáo. Danh mục có ngân sách hiện kèm hạn mức, phần trăm đã dùng và trạng thái theo BR-18 |
 | BR-28 | Báo cáo tính lại mỗi khi mở màn và khi quay lại từ màn sửa giao dịch |
 
 ## 4. Trạng thái
@@ -222,7 +222,7 @@ sequenceDiagram
 | MSG-17 | **SCR-09** | Báo cáo sẽ hiện ở đây khi bạn có giao dịch. \[Ghi khoản đầu tiên\] |
 | MSG-18 | **SCR-09** | Không có giao dịch nào trong tháng {m}/{yyyy} |
 | MSG-19 | **SCR-09**, phần cơ cấu | Chưa có khoản {chi / thu} nào trong tháng này |
-| MSG-20 | **SCR-09** | Tháng chưa kết thúc, số liệu so sánh với cả tháng {m} |
+| MSG-20 | **SCR-09** | Tháng chưa kết thúc, đang so với cùng kỳ tháng {m} (ngày 1–{d}) |
 
 Bản EN: `[chờ bổ sung]`.
 

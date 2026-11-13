@@ -35,6 +35,7 @@
 | BR-33 | **Thoát ký tự**: ô chứa dấu phẩy, ngoặc kép hoặc xuống dòng được bọc trong ngoặc kép, ngoặc kép bên trong nhân đôi. Ô bắt đầu bằng =, +, -, @ được thêm dấu nháy đơn ở đầu để bảng tính không chạy như công thức |
 | BR-34 | **Sắp xếp** theo ngày tăng dần, cùng ngày theo thời điểm tạo. **Tên file**: chi-tieu_{yyyymmdd}-{yyyymmdd}.csv; chọn Tất cả thì lấy ngày giao dịch đầu và cuối |
 | BR-35 | Không có giao dịch khớp → không cho xuất. File tạm bị xoá sau khi bảng chia sẻ đóng |
+| BR-37 | **Kèm danh mục và ngân sách** (tuỳ chọn, mặc định tắt): tạo thêm `danh-muc_{yyyymmdd}.csv` (Loại, Tên, Trạng thái Đang dùng / Đã ẩn) và `ngan-sach_{yyyymmdd}.csv` (Danh mục, Hạn mức, Áp dụng từ tháng); cùng định dạng BR-31, BR-33. Ba file được chia sẻ cùng lúc qua bảng chia sẻ |
 
 ## 4. Trạng thái
 
@@ -144,6 +145,7 @@ flowchart TD
 | 4 | Loại giao dịch | Segmented | Có | Tất cả, Chỉ chi, Chỉ thu |
 | 5 | Xem trước | Text | – | "Sẽ xuất {n} giao dịch, từ {dd/mm/yyyy} đến {dd/mm/yyyy}" hoặc MSG-21 |
 | 6 | Mô tả file | Text phụ | – | "File CSV gồm: Ngày, Loại, Danh mục, Số tiền, Ghi chú. Mở được bằng Excel, Google Sheets" |
+| 6b | Kèm danh mục và ngân sách | Toggle | Không | Mặc định tắt (BR-37) |
 | 7 | Nút "Xuất CSV" | Button | – | Disabled khi n = 0; đang tạo → vòng xoay, chặn bấm lại |
 
 **Ví dụ nội dung file**
@@ -162,7 +164,7 @@ Ngày,Loại,Danh mục,Số tiền,Ghi chú
 | --- | --- | --- | --- |
 | \[TxnCount\] | from_date, to_date, type | Số giao dịch | Cập nhật xem trước |
 | \[TxnExportQuery\] | from_date, to_date, type | Giao dịch đã sắp xếp, kèm tên danh mục | BR-34 |
-| \[CsvWrite\] | Danh sách giao dịch | Đường dẫn file tạm | BR-31–33; ghi theo lô 1.000 dòng |
+| \[CsvWrite\] | Danh sách giao dịch; danh mục, ngân sách khi bật BR-37 | Đường dẫn các file tạm | BR-31–33, BR-37; ghi theo lô 1.000 dòng |
 | \[ShareSheetOpen\] | Đường dẫn file | completed (bool) | API chia sẻ của hệ điều hành |
 | \[TempFileDelete\] | Đường dẫn file | – | BR-35 |
 

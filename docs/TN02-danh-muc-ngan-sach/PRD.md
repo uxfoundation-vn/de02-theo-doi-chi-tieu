@@ -76,7 +76,7 @@ Vượt ngân sách được báo bằng con số và màu cảnh báo, không d
 | Danh mục có sẵn (Chi) | Ăn uống, Đi lại, Mua sắm, Hoá đơn, Giải trí, Sức khoẻ, Giáo dục, Khác |
 | Danh mục có sẵn (Thu) | Lương, Thưởng, Được cho, Khác |
 | Tên danh mục | 1–30 ký tự, không trùng trong cùng loại |
-| Số danh mục | Tối đa 30 mỗi loại |
+| Số danh mục | Tối đa 30 mỗi loại, tính cả danh mục đã ẩn |
 | Danh mục "Khác" | Không xoá, không ẩn được |
 | Ngân sách | Số nguyên VND > 0, theo danh mục chi, lặp lại hằng tháng |
 | Mốc cảnh báo | 80% (sắp vượt) và 100% (đã vượt) |
@@ -147,7 +147,7 @@ AC01: Chọn danh mục chi chưa có ngân sách, nhập hạn mức tháng.
 
 AC02: Hiện gợi ý "Tháng trước bạn chi {số tiền}" nếu có dữ liệu; chạm để dùng mức gợi ý.
 
-AC03: Ngân sách áp dụng từ tháng hiện tại và lặp lại các tháng sau.
+AC03: Ngân sách áp dụng từ tháng đặt ngân sách và lặp lại các tháng sau. Tháng trước đó không có ngân sách; xem lại tháng đã qua kể từ tháng đặt thì dùng hạn mức hiện tại.
 
 AC04: Sửa hoặc xoá ngân sách không ảnh hưởng giao dịch.
 
@@ -199,7 +199,9 @@ AC04: Cảnh báo không chặn việc lưu giao dịch.
 
 ## 10. Câu hỏi mở
 
-- Có cần ngân sách tổng cho cả tháng ngay ở MVP không?
-- Mốc cảnh báo 80% có cho người dùng tự chỉnh không?
-- Đổi hạn mức giữa tháng có áp dụng cho các tháng đã qua trong báo cáo không?
-- Danh mục có cần danh mục con (Ăn uống → Cà phê) không?
+> Mọi câu hỏi dưới đây đã được PO chốt ngày 13/11/2026; quyết định ghi sau mỗi câu và đã cập nhật vào SRS.
+
+- Có cần ngân sách tổng cho cả tháng ngay ở MVP không? → **Đã chốt:** Không ở MVP.
+- Mốc cảnh báo 80% có cho người dùng tự chỉnh không? → **Đã chốt:** Giữ cảnh báo ngân sách ở mốc cố định 80% và 100%; người dùng không chỉnh mốc.
+- Đổi hạn mức giữa tháng có áp dụng cho các tháng đã qua trong báo cáo không? → **Đã chốt:** Không lưu lịch sử hạn mức: mức mới áp dụng cho mọi tháng từ tháng đặt ngân sách (SRS BR-17).
+- Danh mục có cần danh mục con (Ăn uống → Cà phê) không? → **Đã chốt:** Không ở MVP.

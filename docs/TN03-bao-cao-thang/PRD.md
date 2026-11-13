@@ -77,7 +77,7 @@ Tháng chưa có giao dịch thì nói chưa có, không vẽ biểu đồ rỗn
 | Cơ cấu theo danh mục | Tỉ lệ = chi của danh mục / tổng chi tháng, làm tròn 1 chữ số thập phân |
 | Số danh mục trên biểu đồ tròn | 5 danh mục lớn nhất + "Còn lại" gộp các danh mục khác |
 | So với tháng trước | Chênh lệch tiền và phần trăm; tháng trước bằng 0 thì chỉ hiện số tiền |
-| Tháng đang diễn ra | So với cả tháng trước, kèm ghi chú "Tháng chưa kết thúc" |
+| Tháng đang diễn ra | So với cùng kỳ tháng trước (từ ngày 1 tới cùng ngày), kèm ghi chú "Tháng chưa kết thúc" |
 | Danh mục đã ẩn, đã xoá | Danh mục ẩn vẫn hiện trong báo cáo; giao dịch đã chuyển thì tính vào danh mục nhận |
 
 - Các giá trị trên là **cấu hình**, không cố định trong code.
@@ -185,7 +185,9 @@ AC02: Tháng không có giao dịch → màn trống nói rõ, không vẽ biể
 
 ## 10. Câu hỏi mở
 
-- Tháng đang diễn ra nên so với cả tháng trước hay cùng kỳ tháng trước (đến cùng ngày)?
-- Có cần báo cáo theo năm ở MVP không?
-- Biểu đồ tròn hay cột ngang phù hợp hơn cho cơ cấu chi?
-- Có hiện ngân sách ngay trong báo cáo hay để riêng ở tab Ngân sách?
+> Mọi câu hỏi dưới đây đã được PO chốt ngày 13/11/2026; quyết định ghi sau mỗi câu và đã cập nhật vào SRS.
+
+- Tháng đang diễn ra nên so với cả tháng trước hay cùng kỳ tháng trước (đến cùng ngày)? → **Đã chốt:** So cùng kỳ tháng trước, tính tới cùng ngày (SRS BR-23).
+- Có cần báo cáo theo năm ở MVP không? → **Đã chốt:** Không ở MVP.
+- Biểu đồ tròn hay cột ngang phù hợp hơn cho cơ cấu chi? → **Đã chốt:** Biểu đồ tròn (donut), 5 danh mục lớn nhất + Còn lại (SRS BR-25).
+- Có hiện ngân sách ngay trong báo cáo hay để riêng ở tab Ngân sách? → **Đã chốt:** Có hiện: danh mục có ngân sách hiện hạn mức và trạng thái ngay trong báo cáo (SRS BR-27).
