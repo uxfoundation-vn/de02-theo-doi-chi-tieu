@@ -13,7 +13,6 @@
 | Phạm vi | Quản lý danh mục; đặt, sửa, xoá ngân sách; tiến độ; cảnh báo trong app |
 | Ngoài phạm vi | Danh mục con, ngân sách tổng, ngân sách tuần, thông báo đẩy |
 | Nền tảng | App iOS / Android `[giả định]` |
-| Figma | `[chưa có]` |
 
 ## 2. User Story
 
@@ -319,8 +318,6 @@ sequenceDiagram
 | MSG-14 | Popup | Xoá ngân sách {danh mục}? Giao dịch của bạn không bị ảnh hưởng. \[Huỷ\] \[Xoá\] |
 | MSG-15 | Banner | {Danh mục}: đã dùng {x}% ngân sách tháng, còn {số tiền} · Xem ngân sách |
 | MSG-16 | Banner | {Danh mục}: đã vượt ngân sách tháng {số tiền} · Xem ngân sách |
-
-Bản EN: `[chờ bổ sung]`.
 
 ## 10. Yêu cầu phi chức năng
 

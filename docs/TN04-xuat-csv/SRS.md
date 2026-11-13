@@ -13,7 +13,6 @@
 | Phạm vi | Chọn khoảng thời gian, loại giao dịch; tạo file; chia sẻ |
 | Ngoài phạm vi | Nhập CSV, xuất .xlsx và PDF, sao lưu đám mây |
 | Nền tảng | App iOS / Android `[giả định]` |
-| Figma | `[chưa có]` |
 
 ## 2. User Story
 
@@ -200,8 +199,6 @@ sequenceDiagram
 | MSG-24 | Popup | Không tạo được file. \[Thử lại\] \[Đóng\] |
 | MSG-25 | Toast | Đã xuất {n} giao dịch |
 | MSG-26 | Popup (lần đầu) | File chứa toàn bộ thu chi trong khoảng thời gian đã chọn. Hãy cân nhắc trước khi gửi cho người khác. \[Đã hiểu\] |
-
-Bản EN: `[chờ bổ sung]`.
 
 ## 10. Yêu cầu phi chức năng
 

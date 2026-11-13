@@ -13,7 +13,6 @@
 | Phạm vi | Thêm, sửa, xoá giao dịch; Tổng quan; Sổ giao dịch, tìm kiếm và lọc sổ |
 | Ngoài phạm vi | Nhiều ví, giao dịch định kỳ, ảnh hoá đơn, nhập tự động |
 | Nền tảng | App iOS / Android `[giả định]` |
-| Figma | `[chưa có]` |
 
 ## 2. User Story
 
@@ -304,8 +303,6 @@ sequenceDiagram
 | MSG-07 | **SCR-01** | Tháng này chưa có giao dịch nào |
 | MSG-08 | Toast | Đã chuyển giao dịch sang tháng {m}/{yyyy} |
 | MSG-27 | **SCR-03** | Không tìm thấy giao dịch nào. Thử từ khoá khác hoặc bỏ bớt bộ lọc |
-
-Bản EN: `[chờ bổ sung]`.
 
 ## 10. Yêu cầu phi chức năng
 
