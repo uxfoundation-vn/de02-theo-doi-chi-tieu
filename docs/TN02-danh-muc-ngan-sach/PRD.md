@@ -76,7 +76,7 @@ Vượt ngân sách được báo bằng con số và màu cảnh báo, không d
 | Danh mục có sẵn (Chi) | Ăn uống, Đi lại, Mua sắm, Hoá đơn, Giải trí, Sức khoẻ, Giáo dục, Khác |
 | Danh mục có sẵn (Thu) | Lương, Thưởng, Được cho, Khác |
 | Tên danh mục | 1–30 ký tự, không trùng trong cùng loại |
-| Số danh mục | Tối đa 30 mỗi loại |
+| Số danh mục | Tối đa 30 mỗi loại, tính cả danh mục đã ẩn |
 | Danh mục "Khác" | Không xoá, không ẩn được |
 | Ngân sách | Số nguyên VND > 0, theo danh mục chi, lặp lại hằng tháng |
 | Mốc cảnh báo | 80% (sắp vượt) và 100% (đã vượt) |
@@ -147,7 +147,7 @@ AC01: Chọn danh mục chi chưa có ngân sách, nhập hạn mức tháng.
 
 AC02: Hiện gợi ý "Tháng trước bạn chi {số tiền}" nếu có dữ liệu; chạm để dùng mức gợi ý.
 
-AC03: Ngân sách áp dụng từ tháng hiện tại và lặp lại các tháng sau.
+AC03: Ngân sách áp dụng từ tháng đặt ngân sách và lặp lại các tháng sau. Tháng trước đó không có ngân sách; xem lại tháng đã qua kể từ tháng đặt thì dùng hạn mức hiện tại.
 
 AC04: Sửa hoặc xoá ngân sách không ảnh hưởng giao dịch.
 
@@ -198,6 +198,8 @@ AC04: Cảnh báo không chặn việc lưu giao dịch.
 | Đổi ngân sách giữa tháng | Tiến độ nhảy đột ngột | Tính lại ngay, không giữ lịch sử mức cũ ở MVP |
 
 ## 10. Câu hỏi mở
+
+> Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
 
 - Có cần ngân sách tổng cho cả tháng ngay ở MVP không?
 - Mốc cảnh báo 80% có cho người dùng tự chỉnh không?

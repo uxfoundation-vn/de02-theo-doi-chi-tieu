@@ -204,6 +204,8 @@ AC02: Xoá xong hiện "Đã xoá" kèm Hoàn tác trong 5 giây; số liệu th
 
 ## 10. Câu hỏi mở
 
+> Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
+
 - Có cần đọc số tiền bằng chữ dưới ô nhập để tránh sai số 0?
 - Danh mục có bắt buộc không, hay cho lưu vào "Chưa phân loại"?
 - Sổ giao dịch có cần tìm kiếm và lọc ở MVP?

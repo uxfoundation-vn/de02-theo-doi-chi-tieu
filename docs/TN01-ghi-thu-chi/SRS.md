@@ -127,7 +127,7 @@ flowchart TD
 | --- | --- | --- |
 | E1 | Số tiền vượt giới hạn | Không nhận thêm chữ số, hiện MSG-01 |
 | E2 | Lưu thất bại | Hiện MSG-04, ở lại **SCR-02** |
-| E3 | Loại đang chọn không còn danh mục nào | **SCR-04** hiện màn trống kèm nút "Tạo danh mục" (SRS TN02) |
+| E3 | Loại đang chọn chỉ còn danh mục "Khác" (các danh mục còn lại đã ẩn hoặc xoá) | **SCR-04** hiện "Khác" kèm nút "Tạo danh mục" (SRS TN02). **SCR-04** không bao giờ trống, vì "Khác" không xoá và không ẩn được (BR-16) |
 
 ### UC-02 Sửa và xoá giao dịch
 

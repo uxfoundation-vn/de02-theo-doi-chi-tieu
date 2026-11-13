@@ -30,12 +30,12 @@
 | **Mã** | **Quy tắc** |
 | --- | --- |
 | BR-11 | Khi cài app, tạo sẵn danh mục Chi: Ăn uống, Đi lại, Mua sắm, Hoá đơn, Giải trí, Sức khoẻ, Giáo dục, Khác; Thu: Lương, Thưởng, Được cho, Khác `[giả định]` |
-| BR-12 | **Tên danh mục** 1–30 ký tự, không trùng trong cùng loại (không phân biệt hoa thường). Tối đa 30 danh mục mỗi loại `[giả định]` |
+| BR-12 | **Tên danh mục** 1–30 ký tự, không trùng trong cùng loại (không phân biệt hoa thường). Tối đa 30 danh mục mỗi loại `[giả định]`, **tính cả danh mục đã ẩn**; vì vậy "Hiện lại" một danh mục đã ẩn luôn thực hiện được, không bị chặn bởi giới hạn |
 | BR-13 | Danh mục có biểu tượng (chọn từ bộ có sẵn) và màu (bảng 12 màu); loại không đổi được sau khi tạo |
 | BR-14 | **Ẩn danh mục**: không hiện ở **SCR-04**; giao dịch cũ, báo cáo, ngân sách đang có vẫn giữ |
 | BR-15 | **Xoá danh mục** chưa có giao dịch: xác nhận rồi xoá, kèm xoá ngân sách của danh mục. Đã có giao dịch: phải chọn danh mục cùng loại để nhận giao dịch, hoặc chuyển sang ẩn |
 | BR-16 | Danh mục "Khác" của mỗi loại không xoá, không ẩn, không đổi tên |
-| BR-17 | **Ngân sách**: mỗi danh mục chi có tối đa 1 hạn mức, số nguyên VND > 0, áp dụng từ tháng hiện tại và lặp lại hằng tháng cho tới khi sửa hoặc xoá |
+| BR-17 | **Ngân sách**: mỗi danh mục chi có tối đa 1 hạn mức, số nguyên VND > 0, áp dụng từ **tháng đặt ngân sách** (lưu ở `start_month`) và lặp lại hằng tháng cho tới khi sửa hoặc xoá. Tháng trước `start_month` không có ngân sách. Sửa hạn mức không lưu lịch sử: mức mới áp dụng cho mọi tháng từ `start_month`, kể cả tháng đã qua `[giả định]` |
 | BR-18 | **Tiến độ** = tổng chi của danh mục trong tháng / hạn mức. Trạng thái: `BINH_THUONG` (< 80%), `SAP_VUOT` (≥ 80% và ≤ 100%), `DA_VUOT` (> 100%) |
 | BR-19 | **Cảnh báo** hiện ngay sau khi lưu giao dịch làm danh mục chuyển sang `SAP_VUOT` hoặc `DA_VUOT`. Mỗi mốc chỉ báo 1 lần mỗi tháng cho mỗi danh mục. Sửa, xoá giao dịch làm tiến độ giảm thì không báo |
 | BR-20 | **Gợi ý hạn mức** = tổng chi của danh mục trong tháng trước, làm tròn lên bội số 50.000 ₫; không có dữ liệu thì không gợi ý `[giả định]` |
@@ -121,7 +121,7 @@ flowchart TD
 | **Mã** | **Điều kiện** | **Xử lý** |
 | --- | --- | --- |
 | E1 | Tên trùng | MSG-09, không lưu |
-| E2 | Đã đủ 30 danh mục | Nút "Thêm danh mục" disabled kèm MSG-10 |
+| E2 | Đã đủ 30 danh mục, tính cả đã ẩn (BR-12) | Nút "Thêm danh mục" disabled kèm MSG-10 |
 
 ### UC-05 Đặt và theo dõi ngân sách
 
@@ -168,7 +168,7 @@ flowchart TD
 | A1 | Sửa hạn mức | Chạm ngân sách ở **SCR-07** → **SCR-08** chế độ sửa; lưu thì tính lại tiến độ |
 | A2 | Xoá ngân sách | Nút Xoá ở **SCR-08** → MSG-14 xác nhận; giao dịch không đổi |
 | A3 | Mọi danh mục chi đã có ngân sách | Nút "Thêm ngân sách" ẩn |
-| A4 | Xem tháng đã qua | **SCR-07** chỉ đọc; áp dụng hạn mức hiện tại `[giả định]` |
+| A4 | Xem tháng đã qua | **SCR-07** chỉ đọc. Tháng từ `start_month` trở đi: tính tiến độ theo hạn mức hiện tại `[giả định]`. Tháng trước `start_month`: danh mục không hiện thanh tiến độ, ghi "Chưa đặt ngân sách trong tháng này" (BR-17) |
 | A5 | Chi vừa đặt đã ở mức `SAP_VUOT` hoặc `DA_VUOT` | Hiện đúng trạng thái, không bật cảnh báo vì không phát sinh từ giao dịch |
 
 ### UC-06 Cảnh báo ngân sách
@@ -275,9 +275,9 @@ Thẻ sắp xếp theo tiến độ giảm dần, để danh mục cần chú ý
 | \[CategoryCreate\] | type, name, icon, color | category_id | BR-12, BR-13 |
 | \[CategoryUpdate\] | category_id, name, icon, color, hidden, sort_order | – | BR-14, BR-16 |
 | \[CategoryDelete\] | category_id, move_to_category_id | Số giao dịch đã chuyển | BR-15 |
-| \[BudgetSet\] | category_id, amount | budget_id | BR-17 |
+| \[BudgetSet\] | category_id, amount | budget_id | BR-17; lần đặt đầu ghi `start_month` = tháng hiện tại, sửa hạn mức không đổi `start_month` |
 | \[BudgetDelete\] | budget_id | – | |
-| \[BudgetProgress\] | month | Từng ngân sách: spent, amount, percent, status | BR-18 |
+| \[BudgetProgress\] | month | Từng ngân sách: spent, amount, percent, status | BR-18; bỏ qua ngân sách có `start_month` sau `month` (BR-17) |
 | \[BudgetSuggest\] | category_id | Mức gợi ý hoặc rỗng | BR-20 |
 | \[BudgetAlertCheck\] | category_id, month | Mốc cần báo hoặc rỗng | BR-19 |
 
@@ -304,7 +304,7 @@ sequenceDiagram
 | **Đối tượng** | **Trường** |
 | --- | --- |
 | Category | id, type (EXPENSE, INCOME), name, icon, color, hidden, sort_order, is_default_other |
-| Budget | id, category_id, amount, created_at, updated_at |
+| Budget | id, category_id, amount, start_month, created_at, updated_at |
 | BudgetAlertLog | category_id, month, threshold (80, 100), shown_at |
 
 ## 9. Danh sách thông báo
@@ -312,7 +312,7 @@ sequenceDiagram
 | **ID** | **Nơi hiện** | **Nội dung (VI)** |
 | --- | --- | --- |
 | MSG-09 | Inline | Đã có danh mục tên này |
-| MSG-10 | Inline | Bạn đã có 30 danh mục. Xoá hoặc ẩn bớt để thêm mới |
+| MSG-10 | Inline | Bạn đã có 30 danh mục, tính cả danh mục đã ẩn. Xoá bớt để thêm mới |
 | MSG-11 | Popup | Xoá danh mục "{tên}"? \[Huỷ\] \[Xoá\] |
 | MSG-12 | Popup | "{tên}" đang có {n} giao dịch. Chuyển các giao dịch này sang danh mục khác trước khi xoá. \[Chọn danh mục nhận\] \[Ẩn thay vì xoá\] \[Huỷ\] |
 | MSG-13 | **SCR-07** | Đặt hạn mức cho từng nhóm chi để biết mình còn được tiêu bao nhiêu. \[Đặt ngân sách\] |

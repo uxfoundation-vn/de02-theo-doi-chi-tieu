@@ -167,6 +167,8 @@ AC03: Người dùng đóng bảng chia sẻ mà không lưu → không báo l�
 
 ## 10. Câu hỏi mở
 
+> Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
+
 - Số tiền chi có nên ghi âm (−) thay vì dùng cột Loại?
 - Có cần xuất thêm file danh mục và ngân sách?
 - Có làm nhập từ CSV ở phase sau để khôi phục dữ liệu không?

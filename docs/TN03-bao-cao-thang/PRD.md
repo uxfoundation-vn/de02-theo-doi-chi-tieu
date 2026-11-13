@@ -185,6 +185,8 @@ AC02: Tháng không có giao dịch → màn trống nói rõ, không vẽ biể
 
 ## 10. Câu hỏi mở
 
+> Câu nào đã có giá trị ở mục 5 thì giá trị đó là **tạm chốt** `[giả định]` để dựng flow. Câu hỏi vẫn để mở cho đến khi PO xác nhận.
+
 - Tháng đang diễn ra nên so với cả tháng trước hay cùng kỳ tháng trước (đến cùng ngày)?
 - Có cần báo cáo theo năm ở MVP không?
 - Biểu đồ tròn hay cột ngang phù hợp hơn cho cơ cấu chi?
