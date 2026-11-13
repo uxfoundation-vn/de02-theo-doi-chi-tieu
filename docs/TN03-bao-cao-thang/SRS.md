@@ -1,8 +1,8 @@
-> **Mã:** DE02-TN03-SRS · **Trạng thái:** nháp · **Người viết:** Design (mock) · **PRD:** [PRD.md](PRD.md)
+> **Mã:** DE02-TN03-SRS · **Trạng thái:** đã chốt · **Người viết:** Design · **PRD:** [PRD.md](PRD.md)
 
 # UC-DE02-03 - Báo cáo tháng
 
-> **Bản mock.** Giá trị `[giả định]` cần BA xác nhận. Giao dịch xem [SRS TN01](../TN01-ghi-thu-chi/SRS.md); danh mục và ngân sách xem [SRS TN02](../TN02-danh-muc-ngan-sach/SRS.md).
+> Giao dịch xem [SRS TN01](../TN01-ghi-thu-chi/SRS.md); danh mục và ngân sách xem [SRS TN02](../TN02-danh-muc-ngan-sach/SRS.md).
 
 ## 1. Tổng quan
 
@@ -12,7 +12,7 @@
 | Actor | Người dùng · Hệ thống (app và bộ nhớ trên thiết bị) |
 | Phạm vi | Báo cáo theo tháng; so với tháng trước; chi tiết theo danh mục |
 | Ngoài phạm vi | Báo cáo tuần, quý, năm; xu hướng nhiều tháng; xuất ảnh, PDF |
-| Nền tảng | App iOS / Android `[giả định]` |
+| Nền tảng | App iOS / Android |
 
 ## 2. User Story
 
@@ -32,7 +32,7 @@
 | BR-22 | **Tóm tắt**: tổng thu, tổng chi, còn lại = thu − chi; cùng công thức với BR-08 |
 | BR-23 | **So với tháng trước**: tháng đã kết thúc → so với **cả** tháng trước. Tháng đang diễn ra → so **cùng kỳ**: tháng trước tính từ ngày 1 tới cùng ngày với hôm nay (tháng trước ngắn hơn thì tới ngày cuối tháng đó). Chênh lệch = tháng này − kỳ so sánh; phần trăm = chênh lệch / tháng trước, làm tròn số nguyên. Tháng trước bằng 0 → chỉ hiện chênh lệch tiền. Tháng trước không có giao dịch nào → không hiện so sánh |
 | BR-24 | **Cơ cấu**: tỉ lệ danh mục = tổng của danh mục / tổng của loại trong tháng, làm tròn 1 chữ số thập phân; tổng các tỉ lệ hiển thị có thể lệch 0,1% do làm tròn |
-| BR-25 | **Biểu đồ tròn** hiện 5 danh mục lớn nhất; các danh mục còn lại gộp thành "Còn lại". Ít hơn hoặc bằng 5 danh mục thì không có "Còn lại" `[giả định]` |
+| BR-25 | **Biểu đồ tròn** hiện 5 danh mục lớn nhất; các danh mục còn lại gộp thành "Còn lại". Ít hơn hoặc bằng 5 danh mục thì không có "Còn lại" |
 | BR-26 | **Chi theo ngày**: tổng chi mỗi ngày trong tháng; ngày chưa đến của tháng hiện tại để trống; trung bình ngày = tổng chi / số ngày đã qua (tháng hiện tại) hoặc số ngày của tháng (tháng đã qua) |
 | BR-27 | Danh mục `DA_AN` vẫn hiện trong báo cáo. Danh mục có ngân sách hiện kèm hạn mức, phần trăm đã dùng và trạng thái theo BR-18 |
 | BR-28 | Báo cáo tính lại mỗi khi mở màn và khi quay lại từ màn sửa giao dịch |
@@ -157,7 +157,7 @@ flowchart TD
 | **Điểm vào** | **Dẫn tới** | **Ghi chú** |
 | --- | --- | --- |
 | Tab Báo cáo | UC-07, **SCR-09** | Mặc định tháng hiện tại, loại Chi |
-| Thẻ số liệu ở **SCR-01** | UC-07, **SCR-09** | `[giả định]` |
+| Thẻ số liệu ở **SCR-01** | UC-07, **SCR-09** | |
 | Danh mục trong **SCR-09** | UC-08, **SCR-10** | |
 | Nút "Xuất" ở **SCR-09** | **SCR-11** (SRS TN04) | Điền sẵn tháng đang xem |
 
@@ -225,7 +225,7 @@ sequenceDiagram
 
 ## 10. Yêu cầu phi chức năng
 
-| **Mục** | **Yêu cầu** `[giả định]` |
+| **Mục** | **Yêu cầu** |
 | --- | --- |
 | Hiệu năng | **SCR-09** hiện ≤ 1 giây với 10.000 giao dịch; đổi tháng ≤ 500 ms |
 | Chính xác | Tổng các danh mục bằng đúng tổng của loại; phép tính trên số nguyên |

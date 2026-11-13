@@ -1,8 +1,6 @@
-> **Mã:** DE02-TN01-PRD · **Trạng thái:** nháp · **Người viết:** Design (mock) · **SRS:** [SRS.md](SRS.md)
+> **Mã:** DE02-TN01-PRD · **Trạng thái:** đã chốt · **Người viết:** Design · **SRS:** [SRS.md](SRS.md)
 
 # PRD Ghi thu/chi (App theo dõi chi tiêu)
-
-> **Bản mock.** Con số đánh dấu `[giả định]` dùng để dựng flow, cần PO xác nhận trước khi dùng.
 
 ## 1. Bối cảnh và vấn đề
 
@@ -22,8 +20,8 @@ App theo dõi chi tiêu cá nhân, dữ liệu lưu trên máy (xem [README](../
 
 ### 1.3 Mục tiêu
 
-- Ghi một khoản chi trong ≤ 10 giây kể từ khi bấm "+" `[giả định]`.
-- Người dùng hoạt động ghi trung bình ≥ 3 giao dịch mỗi ngày `[giả định]`.
+- Ghi một khoản chi trong ≤ 10 giây kể từ khi bấm "+".
+- Người dùng hoạt động ghi trung bình ≥ 3 giao dịch mỗi ngày.
 - Sửa và xoá giao dịch không làm mất dữ liệu ngoài ý muốn.
 
 ## 2. Người dùng
@@ -71,7 +69,7 @@ Chạm vào giao dịch là sửa. Xoá có Hoàn tác thay cho hỏi xác nhậ
 
 ## 5. Quy tắc nghiệp vụ
 
-| **Quy tắc** | **Giá trị** `[giả định]` |
+| **Quy tắc** | **Giá trị** |
 | --- | --- |
 | Số tiền | Số nguyên VND, từ 1 đến 999.999.999.999 |
 | Loại | Chi hoặc Thu; mặc định Chi |
@@ -181,7 +179,7 @@ AC01: Xoá bằng vuốt trái ở danh sách hoặc nút Xoá ở màn sửa.
 
 AC02: Xoá xong hiện "Đã xoá" kèm Hoàn tác trong 5 giây; số liệu tháng cập nhật ngay và hoàn lại khi hoàn tác.
 
-## 8. Chỉ số theo dõi `[giả định]`
+## 8. Chỉ số theo dõi
 
 | **Chỉ số** | **Định nghĩa** | **Mục tiêu MVP** |
 | --- | --- | --- |

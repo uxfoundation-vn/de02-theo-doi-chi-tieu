@@ -1,8 +1,8 @@
-> **Mã:** DE02-TN04-SRS · **Trạng thái:** nháp · **Người viết:** Design (mock) · **PRD:** [PRD.md](PRD.md)
+> **Mã:** DE02-TN04-SRS · **Trạng thái:** đã chốt · **Người viết:** Design · **PRD:** [PRD.md](PRD.md)
 
 # UC-DE02-04 - Xuất CSV
 
-> **Bản mock.** Giá trị `[giả định]` cần BA xác nhận. Giao dịch xem [SRS TN01](../TN01-ghi-thu-chi/SRS.md).
+> Giao dịch xem [SRS TN01](../TN01-ghi-thu-chi/SRS.md).
 
 ## 1. Tổng quan
 
@@ -12,7 +12,7 @@
 | Actor | Người dùng · Hệ thống (app) · Bảng chia sẻ của hệ điều hành |
 | Phạm vi | Chọn khoảng thời gian, loại giao dịch; tạo file; chia sẻ |
 | Ngoài phạm vi | Nhập CSV, xuất .xlsx và PDF, sao lưu đám mây |
-| Nền tảng | App iOS / Android `[giả định]` |
+| Nền tảng | App iOS / Android |
 
 ## 2. User Story
 
@@ -29,7 +29,7 @@
 | --- | --- |
 | BR-29 | **Khoảng thời gian**: Tháng này (mặc định), Tháng trước, Năm nay, Tất cả, Tuỳ chọn. Tuỳ chọn: từ ngày ≤ đến ngày ≤ hôm nay. Mở từ **SCR-09** thì điền sẵn tháng đang xem |
 | BR-30 | **Loại**: Tất cả (mặc định), Chỉ chi, Chỉ thu |
-| BR-31 | **Định dạng file**: CSV, UTF-8 có BOM, dấu phẩy ngăn cột, xuống dòng CRLF, dòng đầu là tiêu đề cột `[giả định]` |
+| BR-31 | **Định dạng file**: CSV, UTF-8 có BOM, dấu phẩy ngăn cột, xuống dòng CRLF, dòng đầu là tiêu đề cột |
 | BR-32 | **Cột**: Ngày (dd/mm/yyyy), Loại (Chi, Thu), Danh mục (tên hiện tại), Số tiền (số nguyên dương, không dấu ngăn nghìn), Ghi chú |
 | BR-33 | **Thoát ký tự**: ô chứa dấu phẩy, ngoặc kép hoặc xuống dòng được bọc trong ngoặc kép, ngoặc kép bên trong nhân đôi. Ô bắt đầu bằng =, +, -, @ được thêm dấu nháy đơn ở đầu để bảng tính không chạy như công thức |
 | BR-34 | **Sắp xếp** theo ngày tăng dần, cùng ngày theo thời điểm tạo. **Tên file**: chi-tieu_{yyyymmdd}-{yyyymmdd}.csv; chọn Tất cả thì lấy ngày giao dịch đầu và cuối |
@@ -202,7 +202,7 @@ sequenceDiagram
 
 ## 10. Yêu cầu phi chức năng
 
-| **Mục** | **Yêu cầu** `[giả định]` |
+| **Mục** | **Yêu cầu** |
 | --- | --- |
 | Hiệu năng | Tạo file 10.000 giao dịch ≤ 3 giây; giao diện không bị đứng khi đang tạo |
 | Tương thích | File mở đúng tiếng Việt trên Excel (Windows, macOS), Google Sheets, Numbers |

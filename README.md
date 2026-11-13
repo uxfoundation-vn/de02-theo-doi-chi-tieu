@@ -1,6 +1,6 @@
 # Đề 2 · App theo dõi chi tiêu
 
-> **Mã:** DE02 · **Độ khó:** 2/8 · **Vai trò:** 1 (người dùng) · **Nền tảng:** App iOS / Android `[giả định]`
+> **Mã:** DE02 · **Độ khó:** 2/8 · **Vai trò:** 1 (người dùng) · **Nền tảng:** App iOS / Android
 
 App giúp một người ghi lại thu chi hằng ngày, đặt ngân sách theo danh mục và xem báo cáo tháng. Dữ liệu lưu trên máy, không cần tài khoản, không kết nối ngân hàng. Đề gồm 4 tính năng; mỗi tính năng có 1 PRD và 1 SRS riêng.
 
@@ -70,7 +70,6 @@ Ngoài phạm vi cả đề: tài khoản và đồng bộ, kết nối ngân h�
 - Tháng tính theo lịch, từ ngày 1 đến ngày cuối tháng, theo múi giờ thiết bị.
 - Mã BR, MSG, UC đánh số liên tục trong cả đề: TN01 dùng BR-01–10, MSG-01–08; TN02 dùng BR-11–20, MSG-09–16; TN03 dùng BR-21–28, MSG-17–20; TN04 dùng BR-29–35, MSG-21–26. Mã bổ sung sau đánh tiếp từ số cuối: BR-36, MSG-27 (tìm kiếm, lọc sổ giao dịch) ở SRS TN01; BR-37 (xuất kèm danh mục, ngân sách) ở SRS TN04.
 - Điều hướng: tab bar Tổng quan · Sổ giao dịch · Ngân sách · Báo cáo; nút "+" nổi ở mọi tab.
-- Giá trị đánh dấu `[giả định]` dùng để dựng flow, cần PO hoặc BA xác nhận trước khi dùng.
 
 ## Danh sách màn hình
 
