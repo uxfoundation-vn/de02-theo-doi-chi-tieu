@@ -13,7 +13,6 @@
 | Phạm vi | Báo cáo theo tháng; so với tháng trước; chi tiết theo danh mục |
 | Ngoài phạm vi | Báo cáo tuần, quý, năm; xu hướng nhiều tháng; xuất ảnh, PDF |
 | Nền tảng | App iOS / Android `[giả định]` |
-| Figma | `[chưa có]` |
 
 ## 2. User Story
 
@@ -223,8 +222,6 @@ sequenceDiagram
 | MSG-18 | **SCR-09** | Không có giao dịch nào trong tháng {m}/{yyyy} |
 | MSG-19 | **SCR-09**, phần cơ cấu | Chưa có khoản {chi / thu} nào trong tháng này |
 | MSG-20 | **SCR-09** | Tháng chưa kết thúc, đang so với cùng kỳ tháng {m} (ngày 1–{d}) |
-
-Bản EN: `[chờ bổ sung]`.
 
 ## 10. Yêu cầu phi chức năng
 
