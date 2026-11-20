@@ -197,8 +197,6 @@ AC04: Cảnh báo không chặn việc lưu giao dịch.
 
 ## 10. Câu hỏi mở
 
-> Mọi câu hỏi dưới đây đã được PO chốt ngày 13/11/2026; quyết định ghi sau mỗi câu và đã cập nhật vào SRS.
-
 - Có cần ngân sách tổng cho cả tháng ngay ở MVP không? → **Đã chốt:** Không ở MVP.
 - Mốc cảnh báo 80% có cho người dùng tự chỉnh không? → **Đã chốt:** Giữ cảnh báo ngân sách ở mốc cố định 80% và 100%; người dùng không chỉnh mốc.
 - Đổi hạn mức giữa tháng có áp dụng cho các tháng đã qua trong báo cáo không? → **Đã chốt:** Không lưu lịch sử hạn mức: mức mới áp dụng cho mọi tháng từ tháng đặt ngân sách (SRS BR-17).
